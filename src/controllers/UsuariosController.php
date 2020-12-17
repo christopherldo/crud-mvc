@@ -11,6 +11,7 @@ class UsuariosController extends Controller
   {
     $this->render('add');
   }
+
   public function addAction()
   {
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -24,7 +25,7 @@ class UsuariosController extends Controller
           'nome' => $name,
           'email' => $email
         ])->execute();
-        
+
         $this->redirect('/');
         exit;
       }
@@ -32,5 +33,13 @@ class UsuariosController extends Controller
 
     $this->redirect('/novo');
     exit;
+  }
+
+  public function edit($args)
+  {
+  }
+
+  public function delete($args)
+  {
   }
 }
