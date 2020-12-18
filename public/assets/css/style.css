@@ -1,0 +1,32 @@
+body {
+  font-family: Helvetica;
+  font-size: 13px;
+  margin: 20px;
+}
+
+table {
+  margin-top: 20px;
+}
+
+table th {
+  padding: 10px;
+  background-color: #999;
+}
+
+table tr td {
+  padding: 10px;
+}
+
+table a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 5px;
+}
+
+table tr:hover td {
+  background-color: #EEE;
+}
+
+img {
+  height: 30px;
+}

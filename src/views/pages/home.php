@@ -15,11 +15,11 @@
       <td><?= $usuario['nome'] ?></td>
       <td><?= $usuario['email'] ?></td>
       <td>
-        <a href="<?= $base . '/usuario/' . $usuario['id'] . '/editar' ?>" style="display: inline-block; height: 48px; line-height: 48px">
-          [EDITAR]
+        <a href="<?= $base . '/usuario/' . $usuario['id'] . '/editar' ?>">
+          <img src="<?= $base ?>/assets/images/document.png" alt="">
         </a>
-        <a href="<?= $base . '/usuario/' . $usuario['id'] . '/excluir' ?>" style="display: inline-block; height: 48px; line-height: 48px" onclick="return confirm('Tem certeza que deseja excluir?')">
-          [EXCLUIR]
+        <a href="<?= $base . '/usuario/' . $usuario['id'] . '/excluir' ?>" onclick="return confirm('Tem certeza que deseja excluir?')">
+          <img src="<?= $base ?>/assets/images/trash.png" alt="">
         </a>
       </td>
     </tr>
