@@ -1,5 +1,1 @@
-core
 vendor
-composer.json
-composer.lock
-src/Config.php
