@@ -57,7 +57,7 @@ class UsuariosController extends Controller
 
     $sameUser = Usuario::select()->where('email', $email)->first();
 
-    if($args['id'] === $sameUser['id']){
+    if ($args['id'] === $sameUser['id']) {
       $sameUser = false;
     }
 
@@ -66,7 +66,7 @@ class UsuariosController extends Controller
         ->set('nome', $name)
         ->set('email', $email)
         ->where('id', $args['id'])
-      ->execute();
+        ->execute();
 
       $this->redirect('/');
       exit;
@@ -78,5 +78,15 @@ class UsuariosController extends Controller
 
   public function delete($args)
   {
+    $usuario = Usuario::select()->where('id', $args['id'])->first();
+
+    if ($usuario) {
+      Usuario::delete()
+        ->where('id', $args['id'])
+        ->execute();
+    }
+
+    $this->redirect('/');
+    exit;
   }
 }
